@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'main#index'
-  get 'restricted' => 'main#restricted'
+  # get 'restricted' => 'main#restricted'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -20,9 +20,9 @@ Rails.application.routes.draw do
   #render users
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
-  get '/' => 'posts#index'
-  get 'posts/new' => 'posts#new'
-  post 'posts' => 'posts#create'
+  get '/' => 'main#index'
+  get 'newpost' => 'main#newpost'
+  post 'newpost' => 'main#createpost'
 
 
   #nested routing

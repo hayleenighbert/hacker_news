@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
 	uniqueness: {case_sensitive: false},
   email: true
 
-  has_many :posts
-  
+  has_many :post
+
   # validated :password,
   # presence: true
 
