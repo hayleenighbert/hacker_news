@@ -1,0 +1,13 @@
+<span align="center"><h1>Login here</h1></span>
+<div class="container" width:"500px">
+
+<%= form_for :user do |f| %>
+  <%= f.text_field :email, placeholder:'Email' %>
+  <%= f.password_field :password, placeholder: 'Password' %>
+
+  <%= f.submit 'Login' %>
+
+  </div>
+<!--   //instead of f.primary (bootstrap)  -->
+
+<% end %>
