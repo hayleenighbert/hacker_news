@@ -1,14 +1,13 @@
-class MainController < ApplicationController
-	before_action :is_authenticated?
-	#question mark is used in ruby to return a boolean value
+class PostsController < ApplicationController
 
-  def index
-  	@posts = Post.all
-  end
+
+before_action :is_authenticated?
+
+def index
+
+end
 
 def newpost
-	# @tags = Tag.all
-	@post = Post.new
 
 end
 
@@ -23,3 +22,4 @@ end
 		params.require(:user).permit(:title, :link)
 	end
 end
+
