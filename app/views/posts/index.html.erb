@@ -1,0 +1,21 @@
+<div class="container">
+<div class="row">
+  <div class="col-xs-8">
+    <h1>Posts</h1>
+  </div>
+  <div class="col-xs-4">
+    <%= link_to '', new_post_path, class: '' %>
+  </div>
+</div>
+
+<div class='row'>
+	<% Post.all.each do |p| %>
+
+	<div class="col-sm-8 col-sm-offset-2">
+
+	  <h2><%= link_to p.title, p.link %></h2>
+
+	  	
+	</div>
+	<% end %>
+</div>

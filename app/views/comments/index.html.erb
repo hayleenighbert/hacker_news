@@ -1,0 +1,25 @@
+<div class="page-header">
+
+<h1><%= link_to @p.title, @p.link %></h1>
+<%= link_to 'New Comment', new_post_comment_path(post), class: 'btn pull-right' %>
+</div>
+		
+	<%= form_for :comment do |f| %>
+  		<%= f.text_area :body, placeholder: 'Comment' %>
+  		<% f.hidden_field :user_id%>
+
+  		<%= f.submit 'Post' %>
+
+
+
+<%= link_to @post.title, @post.link %>
+<%= link_to 'New Comment', new_post_comment_path(@post), class: 'btn pull-right' %>
+
+<% @post.comment.each do |comment| %>
+	  	<p><%= comment.body %></p>
+	  	<%= link_to '', post_comment_path(@post, comment), class: 'fa fa-times', method: :delete %>
+
+
+</div>
+<% end %>
+		<% end %>

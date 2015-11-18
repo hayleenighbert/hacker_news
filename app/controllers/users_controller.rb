@@ -9,6 +9,10 @@ class UsersController < ApplicationController
         redirect_to root_path
     end
 
+    def show
+        @post = Posts.all
+    end
+
     private
 
     def signup_params

@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get '/' => 'main#index'
   get 'newpost' => 'main#newpost'
   post 'newpost' => 'main#createpost'
+  # post 'comment' => 'comments#createcomment'
 
 
   #nested routing

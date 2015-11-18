@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   email: true
 
   has_many :post
+  has_many :comment
 
   # validated :password,
   # presence: true

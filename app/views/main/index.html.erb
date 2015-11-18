@@ -1,19 +1,24 @@
-<h1>Links</h1>
-<%= link_to "New Post", {
+<div class="page-header">
+<h1>Snaplinks</h1><br>
+<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/49083-200.png" height="150px"><p>
+<center><h4>
+	<%= link_to "New Post", {
 		:controller => "main",
 		:action => "newpost"
-	}%>
+	}%></h4>
+	</center>
 
-		<div class="container">
-		<ul>
+	</div>
+
+<div class="container">
+
 			<% Post.all.each do |p| %>
-			<%= p.title %><br>
-			<%= p.link %>
-		</ul>
-
-		</p>
+	<div class="row" style="align-left">
+			<%= link_to p.title, p.link %>
 
 
-	<% end %>
 </div>
+</div>
+
+<% end %>
 
