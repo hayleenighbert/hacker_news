@@ -13,12 +13,14 @@
 
 			<div class="col-sm-8 col-sm-offset-2">
 
-	  			<h2><%= link_to p.title, p.link %></h2>
+	  			<h2><%= link_to p.title, p.link %></h2><br>
+	  			Posted by <%=p.user.email $>
+	  			<%= link_to "delete", {:controller => "posts", :action => "destroy", :id => post.id}
 
 	  	
 			</div>
 	</div>
-	
+
 </div>
 
 	<% end %>
