@@ -3,14 +3,15 @@ class MainController < ApplicationController
 	#question mark is used in ruby to return a boolean value
 
   def index
+  	# current_user
   	@posts = Post.all
   end
 
-def newpost
+	def newpost
 	# @tags = Tag.all
 	@post = Post.new
 
-end
+	end
 
 	def createpost
 		User.find_by_id(session[:user_id]).post.create createpost_params

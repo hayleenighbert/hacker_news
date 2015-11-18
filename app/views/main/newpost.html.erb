@@ -1,14 +1,14 @@
-
 <div class="page-header">
-<h1>Create a post</h1>
+	<h1>Create a post</h1>
 </div>
 
-<div class="container">
+	<div class="container">
 		
-	<%= form_for :user do |f| %>
+		<%= form_for :user do |f| %>
   		<%= f.text_field :title, placeholder: 'Title' %>
   		<%= f.text_field :link, placeholder: 'Link' %>
 
   		<%= f.submit 'Post' %>
-</div>
-		<% end %>
+	</div>
+	
+<% end %>

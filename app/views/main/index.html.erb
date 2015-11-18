@@ -1,23 +1,21 @@
 <div class="page-header">
-<h1>Snaplinks</h1><br>
-<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/49083-200.png" height="150px"><p>
-<center><h4>
-	<%= link_to "New Post", {
-		:controller => "main",
-		:action => "newpost"
-	}%></h4>
-	</center>
+	<h1>Snaplinks</h1><br>
+		<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/49083-200.png" height="150px"><p>
+		<center>
+			<h4><%= link_to "New Post", {
+			:controller => "main",
+			:action => "newpost"
+			}%></h4>
+		</center>
 
 	</div>
 
 <div class="container">
-
-			<% Post.all.each do |p| %>
+	<% Post.all.each do |p| %>
 	<div class="row" style="align-left">
 			<%= link_to p.title, p.link %>
 
-
-</div>
+	</div>
 </div>
 
 <% end %>

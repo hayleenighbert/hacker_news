@@ -3,13 +3,13 @@ class PostsController < ApplicationController
 
 before_action :is_authenticated?
 
-def index
+	def index
+		# current_user
+	end
 
-end
-
-def newpost
-
-end
+	def newpost
+		# @post = Post.new
+	end
 
 	def createpost
 		User.find_by_id(session[:user_id]).post.create createpost_params
